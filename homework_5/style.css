@@ -61,7 +61,7 @@ ul {
     border-color: lightgray;
     border-width: 1px;
     border-style: solid;
-    height: 80px;
+    height: 50px;
     align-items: center;
 }
 
@@ -87,12 +87,12 @@ ul {
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 40px;
     border-radius: 40px;
     text-transform: uppercase;
     position: absolute;
-    left: 40%; 
-    top: 45%;
+    left: 30%; 
+    top: 40%;
 }
 
 /* Buttons state on hover */
@@ -112,6 +112,9 @@ ul {
     background-color: white;
     color: #071457 ;
     font-size: 16px;
+    text-decoration: none;
+    border-color: white;
+    padding: 12px;
 }
 
 /* Dropdown */
@@ -153,7 +156,7 @@ ul {
 .dropdown:hover .dropbtn {
     background-color: #FC3C2D ;
     color: white;
-/*    overflow: hidden;*/
+    overflow: hidden;
 }
 
 /* flex-home */ 
@@ -183,6 +186,26 @@ ul {
 /* Product Browsing Page */ 
 
 /* Filtering */ 
+
+.container-nav-pb {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.dropbtn-pb {
+    background-color: white;
+    color: #071457 ;
+    font-size: 16px;
+    text-decoration: none;
+    border-color: white;
+    padding: 12px;
+    border-color: lightgray;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 0 1 auto;
+}
 
 
 
@@ -312,6 +335,11 @@ ul {
 /* Breadcrumbs */ 
 
 /* Style the list */
+
+.breadcrumb {
+    margin: 10px;
+    
+}
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -321,7 +349,7 @@ ul.breadcrumb {
 /* Display list items side by side */
 ul.breadcrumb li {
     display: inline;
-    font-size: 16px;
+    font-size: 12pxpx;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
