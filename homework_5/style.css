@@ -18,7 +18,7 @@ body {
 
 /* Header 1 -- nav logo */
 
-h1, body {
+h1 {
     font-family: "Abril Fatface", serif;
     font-size: 32px;
     text-transform: lowercase;
@@ -58,15 +58,18 @@ ul {
 }
 
 .nav-bar {
-    border-color: aqua;
+    border-color: lightgray;
     border-width: 1px;
     border-style: solid;
+    height: 80px;
+    align-items: center;
 }
 
 /* Homepage */
 
 #nav-links {
     color: #071457;
+    padding: 20px;
 }
 
 
@@ -76,17 +79,6 @@ ul {
 
 /* Buttons on Homepage */
 
-/* attempting to use flex to place the button */ 
-/*
-.wrapper-home {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-
-}
-*/
 
 .button_home {
     background-color: #071457;
@@ -99,8 +91,8 @@ ul {
     border-radius: 40px;
     text-transform: uppercase;
     position: absolute;
-    left: calc(100%- 100px); 
-    top: 50%;
+    left: 40%; 
+    top: 45%;
 }
 
 /* Buttons state on hover */
@@ -110,7 +102,7 @@ ul {
     text-decoration: none;
     color: white;
     position: absolute; /*newly added*/
-    z-index: 3;
+    z-index: 2;
     display: block;
 }
 
@@ -119,9 +111,7 @@ ul {
 .dropbtn {
     background-color: white;
     color: #071457 ;
-    padding: 16px;
     font-size: 16px;
-    border: none;
 }
 
 /* Dropdown */
@@ -137,7 +127,7 @@ ul {
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Links inside dropdown */
@@ -163,6 +153,7 @@ ul {
 .dropdown:hover .dropbtn {
     background-color: #FC3C2D ;
     color: white;
+/*    overflow: hidden;*/
 }
 
 /* flex-home */ 
@@ -181,7 +172,8 @@ ul {
 
 .home-image {
     width: 100%;
-    max-width: none;
+    object-fit: cover;
+    max-height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -189,6 +181,10 @@ ul {
 
 
 /* Product Browsing Page */ 
+
+/* Filtering */ 
+
+
 
 /*Flex box */ 
 
@@ -211,10 +207,18 @@ ul {
     
 }
 
+.product-card:hover {
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    top:-8px;
+    
+}
+
 /* images within product cards */ 
 .product-card img {
-    width: 50%;
+    width: 80%;
     margin: 10px;
+    object-fit: cover;
 }
 
 
@@ -234,13 +238,13 @@ ul {
     margin: 10px;
     position: relative;
     float: center;
-    display: inline-block;
-    
-    
+    display: inline-block;    
 }
 
 .button-product:hover{
-    
+    background-color: #FC3C2D;
+    text-decoration: none;
+    color: white;
 }
 
 /* Color swatches */ 
@@ -307,12 +311,11 @@ ul {
 
 /* Breadcrumbs */ 
 
-
-
 /* Style the list */
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
+    border-color: lightgray;
 }
 
 /* Display list items side by side */
