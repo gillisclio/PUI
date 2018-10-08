@@ -8,10 +8,6 @@
 
 /* Basic */ 
 
-* {
-/*    margin: 10px*/
-}
-
 body {
     font-family: "Lato", sans-serif;
     color: #071457;
@@ -25,8 +21,9 @@ h1 {
     font-family: "Abril Fatface", serif;
     font-size: 32px;
     text-transform: lowercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     display: inline;
+    
 }
 
 h2 {
@@ -80,12 +77,26 @@ ul {
     
 }
 
-.nav-bar {
+.nav-container {
+    width: 100%;
     border-color: lightgray;
     border-width: 1px;
     border-style: solid;
-    height: 50px;
-    align-items: center;
+}
+
+.nav-bar {
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.cart {
+    padding-right: 20px;
+    padding-top: 7px;
+    width:10wv;
+    height: 5%;
 }
 
 /* Homepage */
@@ -110,11 +121,11 @@ ul {
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 36px;
     border-radius: 40px;
     text-transform: uppercase;
     position: absolute;
-    left: 30%; 
+    left: 70%; 
     top: 40%;
 }
 
@@ -138,6 +149,7 @@ ul {
     text-decoration: none;
     border-color: white;
     padding: 12px;
+
 }
 
 /* Dropdown */
@@ -296,7 +308,7 @@ i {
     font-size: 14px;
     border-radius: 40px;
 
-    margin: 10px;
+    margin: 15px;
     position: relative;
     float: center;
     display: inline-block;    
@@ -450,12 +462,11 @@ ul.breadcrumb li a:hover {
     width: 30%;
     float: right;
     margin: 0px 20px;
-    align-items: center;
+    text-align: center;
 }
 
 .description img {
     width: 70%;
-    text-align: center;
 }
 
 
@@ -493,6 +504,7 @@ ul.breadcrumb li a:hover {
     margin-top: 8px;
     height: 50px;
 }
+
 
 
 
