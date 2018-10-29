@@ -1,58 +1,96 @@
 
-$(document).ready(()=>{
-console.log("ready")
+// Dictionary that maps images to user selected values
 
-// Product page
+var image_map = {'fireorange': 'dog-harness1@3x.jpg',
+            'blackberry': 'dog-harness2@3x.jpg',
+            'crazyberry': 'dog-harness3@3x.jpg',
+            'strawberry': 'dog-harness4@3x.jpg'};
 
-var dict = {'fireorange': 'dog-harness1.jpg', 'blackberry': 'dog-harness2.jpg', 'crazyberry': 'dog-harness3.jpg', 'strawberry': 'dogharness4.jpg'};
-console.log(dict);
+// Price for dog harness
+const price = 35.00;
+// Key for cart in localStorage
+const CART_KEY = 'cart';
 
-// var color = $('#color-select');
-// var size = $('#size-select');
-// var qty = $('#qty-select');
-// var price = $('#price');
-// console.log(color);
-// console.log(size);
-// console.log(qty);
-// console.log(price);
+// Run when document is ready, which means it is fully loaded into browser
+$(function(){
 
-function onReady () {
-	var button = document.getElementById('addToCart');
-  if (button) {
-  	button.addEventListener('click', onCartBtnClick);
-  }
-  var cartStorage = GetFromStorage();
-  console.log(cartStorage);
+  $("#color-input").on("change", function(){
+    var selectedVal = $(this).val();
+    if(selectedVal == ""){ //if user hasn't selected any color, returns empty string
+      selectedVal == "fireorange"; //set to fireorange
+    }
+    var image_location = "assets/"+image_map[selectedVal];
+    $("#feature-image-container").attr("src",image_location);
+    console.log(image_map[selectedVal]);
+  });
+
+  $("#addToCart").on("click", saveItemToCart);
+
+
+
+});
+
+
+/* Defining how the item will be saved to cart:
+/*  Getting the values from the three input options,
+/*  Checking to make sure that all values are selected by the user
+/*  Creating an item for the cart and saving it to local storage
+*/
+
+function saveItemToCart(){
+    var color = $('#color-input').val();
+    var size = $('#size-input').val();
+    var qty = $('#qty-input').val();
+
+    if(color == "" || size == "" || qty == ""){
+      console.log("You must select all three things before adding to cart!");
+      return;
+    }
+
+    var item = {
+      'color': color,
+      'size': size,
+      'qty': qty,
+      'price': parseInt(qty) * price
+    };
+    console.log(item);
+
+/* Get Cart from local storage
+ * Add the item we just created to the cart
+ * Save the cart with new items into local storage
+*/
+    var cart = getCartFromStorage();
+    cart.push(item);
+    saveCartToStorage(cart);
+
+    console.log("This is the cart right now:");
+    console.log(getCartFromStorage());
+
 }
 
-function onCartBtnClick() {
-      // get quantity from input
-      var qty-input = document.getElementById('qty-input');
-      var inputQty= qty-input.value;
-      // get color from input
-      var color-input = document.getElementById('color-input');
-      var inputColor = color-input.value;
-      // get size from input
-      var size-input = document.getElementById('size-input');
-      var inputSize = size-input.value;
-      var item = {
-	      quantity: inputValue,
-        color: inputColor,
-        size: inputSize
-      };
-      var cartItems = GetFromStorage();
-      cartItems.push(item); //adding the item to local storage?
-      localStorage.setItem('STORAGE', JSON.stringify(cartItems));
+/* Save cart to local storage
+ * Convert given cart to a string
+ * then save the string to the array that is CART_KEY in local storage
+ */
+function saveCartToStorage(cart){
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
-function GetFromStorage() {
- var storage = localStorage.getItem('STORAGE');
- console.log(storage);
- if (storage) {
- 	return JSON.parse(storage);
- }
- return [];
-}
+/* Get the cart from local storage (returns a string)
+ * Convert string in a Javascript object
+ * If there is no cart from before, create an empty array
+ */
+  function getCartFromStorage(){
+    var cart = localStorage.getItem(CART_KEY);
+    cart = JSON.parse(cart);
+
+//Make sure that cart is always and array and never null
+    if (cart == null){
+      cart = [];
+    }
+
+    return cart;
+
+  };
 
 
-onReady();
