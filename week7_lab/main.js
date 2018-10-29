@@ -15,12 +15,16 @@ class Animal{
     }
 }
 
+function random(length)
+{
+    return Math.floor(Math.random()*length);
+}
 //convetionally put at the bottom becuase of style convention, allows us to start taking advantage of vars and classes 
 $(document).ready(()=>{
     console.log("ready")
 })
 
-var animal = new Animal(picts[1], name[3], age[3])
+var animal = new Animal(picts[random(3)], name[random(5)], age[random(5)])
 //prints in the console that youve declared the object
 console.log(animal)
 $("#animal-img").attr("src", animal.pic);

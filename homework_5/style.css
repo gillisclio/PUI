@@ -1,4 +1,4 @@
-/* CSS */ 
+/* CSS */
 
 /* colors */
 /* persimmon #FC3C2D */
@@ -6,7 +6,7 @@
 /* whale #E0E3EF */
 /* goldenrod #FACA0C */
 
-/* Basics */ 
+/* Basics */
 
 body {
     font-family: "Lato", sans-serif;
@@ -21,14 +21,14 @@ h1 {
     text-transform: lowercase;
     letter-spacing: 4px;
     display: inline;
-    
+
 }
 
 h2 {
     font-size: 14px;
     display: inline;
     font-weight: bold;
-    
+
 }
 
 h3 {
@@ -50,7 +50,7 @@ h5 {
     text-decoration: underline;
     text-decoration-color: #D1D3E0;
     display: inline;
-    
+
 }
 
 
@@ -61,7 +61,7 @@ a {
     color: white;
 }
 
-/* Navbar */ 
+/* Navbar */
 
 ul {
     list-style-type: none;
@@ -72,7 +72,7 @@ ul {
 
 .nav-bar li {
     display: inline;
-    
+
 }
 
 .nav-container {
@@ -122,7 +122,7 @@ ul {
     border-radius: 40px;
     text-transform: uppercase;
     position: absolute;
-    left: 70%; 
+    left: 70%;
     top: 40%;
 }
 
@@ -194,7 +194,7 @@ ul {
     overflow: hidden;
 }
 
-/* Flex on Homepage */ 
+/* Flex on Homepage */
 
 .container-home {
     display: flex;
@@ -216,9 +216,9 @@ ul {
 }
 
 
-/* Product Browsing Page */ 
+/* Product Browsing Page */
 
-/* Filtering */ 
+/* Filtering */
 
 .container-nav-pb {
     display: flex;
@@ -240,7 +240,7 @@ ul {
     flex: 0 1 auto;
 }
 
-/* Arrow */ 
+/* Arrow */
 
 i {
     border: solid #071457;
@@ -257,7 +257,7 @@ i {
 }
 
 
-/* Flex on Product Browsing */ 
+/* Flex on Product Browsing */
 
 .container-pb {
     display: flex;
@@ -265,27 +265,52 @@ i {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    
+
+}
+
+/* wrapper for jQuery card expansion*/
+
+.card {
+    position: relative;
+    overflow: visible;
+    margin: 60px 40px;
+    flex: 0 1 auto;
+    width: 300px;
+    min-height: 300px;
+    padding: 12px 12px;
+
+    display: inline-block;
 }
 
 .product-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 60px 40px;
+/*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+/*    margin: 60px 40px;*/
     text-align: center;
+    display: inline-block;
     flex: 0 1 auto;
-    width: 300px;
-    max-height: 900px;
-    
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: white;
+
 }
 
 .product-card:hover {
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
-    top:-8px;
-    
 }
 
-/* Images within product cards */ 
+.card:hover {
+    z-index: 9;
+}
+
+.expand {
+    margin: 0 30px 30px 30px;
+    overflow: hidden;
+    display: none;
+}
+
+/* Images within product cards */
 .product-card img {
     width: 60%;
     margin: 10px;
@@ -293,32 +318,32 @@ i {
 }
 
 
-/*Button on Product Browsing Page */
+/*Button on product cards */
 
 .button-product {
-    background-color: #071457;
-    border: none;
-    color: white;
-    padding: 10px 32px; 
+    background-color: white;
+    border: 1px solid #071457;
+    color: #071457;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
     font-size: 14px;
     border-radius: 40px;
 
-    margin: 15px;
+    margin: 0 30px;
     position: relative;
     float: center;
-    display: inline-block;    
+    display: inline-block;
 }
 
 .button-product:hover{
-    background-color: #FC3C2D;
+    background-color: #071457;
     text-decoration: none;
     color: white;
 }
 
-/* Color Swatches */ 
+/* Color Swatches */
 
 
 .clearfix::after {
@@ -332,7 +357,7 @@ i {
     align-content: center;
     box-sizing: border-box;
     width: 100%;
-   
+
 }
 
 .color-fireorange {
@@ -341,7 +366,7 @@ i {
     height: 20px;
     margin: 1%;
     border-radius: 2px;
-    
+
     display: inline-block;
     position: relative;
 
@@ -364,7 +389,7 @@ i {
     height: 20px;
     margin: 1%;
     border-radius: 2px;
-    
+
     display: inline-block;
     position: relative;
 }
@@ -375,18 +400,18 @@ i {
     height: 20px;
     margin: 1%;
     border-radius: 2px;
-    
+
     display: inline-block;
     position: relative;
 }
 
-/* Breadcrumbs */ 
+/* Breadcrumbs */
 
 /* Styling the list */
 
 .breadcrumb {
     margin: 10px;
-    
+
 }
 ul.breadcrumb {
     padding: 10px 16px;
@@ -400,7 +425,7 @@ ul.breadcrumb li {
     display: inline;
     font-size: 13px;
     text-transform: uppercase;
-    font-weight: bolder;    
+    font-weight: bolder;
 }
 
 ul.breadcrumb li+li:before {
@@ -425,7 +450,7 @@ ul.breadcrumb li a:hover {
 
 /* Organization via divs */
 
-/* Image classes */ 
+/* Image classes */
 
 .image-display {
     width: 50%;
@@ -435,11 +460,11 @@ ul.breadcrumb li a:hover {
 
 
 .image-stack {
-    display: table-cell; 
+    display: table-cell;
     vertical-align: middle;
     width: 25%;
     float: left;
-    
+
 }
 
 .image-stack img {
@@ -449,15 +474,15 @@ ul.breadcrumb li a:hover {
 .feature-image {
     width: 70%;
     float: right;
-    
+
 }
 
 .feature-image img{
-    width: 100%; 
-    
+    width: 100%;
+
 }
 
-/* Description classes */ 
+/* Description classes */
 .description {
     width: 30%;
     float: right;
@@ -469,13 +494,13 @@ ul.breadcrumb li a:hover {
     width: 70%;
 }
 
-/* Buttons on Product page */ 
+/* Buttons on Product page */
 
-.select-product-detail {
+#color-input, #size-input, #qty-input {
     background-color: white;
     border: none;
     color: #071457;
-    padding: 15px 15px; 
+    padding: 15px 15px;
     text-align: left;
     text-decoration: none;
     text-transform: uppercase;
@@ -486,13 +511,14 @@ ul.breadcrumb li a:hover {
     margin-top: 8px;
     height: 50px;
     font-weight: 500;
+    border-radius: none;
 }
 
-.button-add-to-cart {
+#addToCart {
     background-color: white;
     border: none;
     color: #071457;
-    padding: 10px 32px; 
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -504,6 +530,34 @@ ul.breadcrumb li a:hover {
     margin-top: 8px;
     height: 50px;
 }
+
+
+/* inputs */
+
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+option {
+    background-color: white;
+    border: none;
+    color: #071457;
+    padding: 15px 15px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #071457;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    height: 50px;
+    font-weight: 500;
+    border-radius: none;
+}
+
+
 
 
 

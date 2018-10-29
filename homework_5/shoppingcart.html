@@ -3,6 +3,7 @@
 <head>
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-cart.css">
     <meta charset="UTF-8">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato" rel="stylesheet">
@@ -35,25 +36,47 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </header>
+    <!-- Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="home.html">< CONTINUE SHOPPING</a></li>
+    </ul>
 
-<div class="container-home">
-    <div class="child-home">
-        <img class="home-image" src="assets/catinnature.jpg" alt=cat>
-        <button onclick="location.href='product_dogharness.html'" class="button_home" >shop for cats</button>
-
-    </div>
-
-    <div class="child-home">
-        <img class="home-image" src="assets/doginnature.jpg" alt=dog>
-        <div class="wrapper-home">
-            <button onclick="location.href='product_dogharness.html'" class="button_home" >shop for dogs
-            </button>
+    <!-- Content -->
+    <div class="cart-container">
+        <h4>Shopping Cart</h4>
+        <div class="cart-item">
+            <div class="delete-container">
+                <button class="delete-btn">X</button>
+            </div>
+            <img class= "thumbnail" src="assets/dog-harness1@3x.jpg" alt=dog>
+            <div class="cart-descript">
+                <h5>Dog Harness</h5>
+                <p>Size: Tiny</p>
+                <p>Color: Fire Orange</p>
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                </div>
+            </div>
+            <div class="total-price">
+                <h5>Price: $35</h5>
+            </div>
         </div>
     </div>
-</div>
 
+    <div class="checkout-container">
+        <h4>Cart Summary</h4>
+        <div class="pricing-display">
+            <div>
+                <p>Subtotal: $35.00</p>
+                <p>Shipping</p>
+                <p>Tax</p>
+                <h5>Estimated Total: $35.00</h5>
+            </div>
+            <button class="button-checkout">Check out now</button>
+        </div>
+    </div>
 
-</body>

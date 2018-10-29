@@ -1,0 +1,97 @@
+/* CSS */
+
+/* colors */
+/* persimmon #FC3C2D */
+/* navy #071457 */
+/* whale #E0E3EF */
+/* goldenrod #FACA0C */
+
+/* Shopping Cart page */
+
+h4 {
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+    padding: 0px;
+}
+
+.cart-container {
+    margin: 20px 50px;
+    width: 50%;
+}
+
+.cart-item {
+    width: 100%;
+    float: left;
+    background: white;
+/*    border: 2px #E0E3EF solid;*/
+    padding: 15px 15px;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+}
+
+.cart-item img {
+    width: 20%;
+    float: left;
+}
+
+.cart-descript {
+    float: left;
+    padding: 0px 15px;
+}
+
+.cart-price {
+    float: right;
+    display: inline-grid;
+}
+
+.checkout-container {
+    width: 25%;
+    margin: 20px 50px;
+    float: right;
+}
+
+.pricing-display {
+    width: 100%;
+    float: right;
+    background-color: #E0E3EF;
+    padding: 0px 15px;
+}
+
+.button-checkout {
+    background-color:#FC3C2D ; /*persimmon*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    height: 50px;
+}
+
+.delete-container {
+    position:relative;
+}
+
+.delete-btn {
+    width: 18px;
+    border-color:none;
+    border-style: none;
+    border-width: none;
+    font-size: 18px;
+    float: right;
+    text-align: center;
+    position:absolute; top:0; right:0;
+}
+
+.quantity {
+
+}
+
+.total-price {
+    position: relative;
+    top: 25px;
+}
