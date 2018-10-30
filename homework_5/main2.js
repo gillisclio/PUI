@@ -31,7 +31,7 @@ $(function(){
 
 
 
-
+});
 
 
 /* Defining how the item will be saved to cart:
@@ -56,7 +56,8 @@ function saveItemToCart(){
       'color': color,
       'size': size,
       'qty': qty,
-      'price': parseInt(qty) * price
+      'price': parseInt(qty) * price,
+      'uid': "uid_"+Math.floor(Math.random()*10e6)
     };
     console.log(item);
 
@@ -109,24 +110,32 @@ function saveCartToStorage(cart){
     for (let i = 0; i < cartStorage.length; i++){
       var item = cartStorage[i];
       var totalItems = `
-      <tr class="cart-item">
-      <td><p><img "width: 150px; height: 150px; padding: 0px 15px;" src="${findImage(item)}">
+      <tr class="cart-item" data-item-uid="${item.uid}">
+      <td><p><img "width: 150px; height: 150px; padding: 0px 15px;" src="assets/dog-harness1@3x.jpg">
       <td><p>${item.name}<br><br>
         Size: ${item.size}<br><br>
         Color: ${item.color}<br><br>
         Quantity: ${item.qty}</p></td>
-      <td><button class="delete-btn">X</button></td>
+      <td><button class="delete-btn" data-uid="${item.uid}">X</button></td>
       <tr>`
       totalTable = totalTable+totalItems;
-      console.log(totalTable);
     }
 
-    var cartTable = $("cart-items");
-    var finalTable = totalTable;
+    var cartTable = document.getElementById("cart-items");
+    cartTable.innerHTML = totalTable;
+  };
 
-    cartTable.innerHTML = finalTable;
+  function addListeners(){
+    $(".delete-btn").click(function(){
+      var uid = $(this).attr("data-uid");
+      if (uid) {
+        var cart = getCartFromStorage();
+        cart = cart.filter( x =>  x.uid !== uid);
+        saveCartToStorage(cart);
+        $(`[data-item-uid="${uid}"]`).remove();
+      }
+    });
   };
 
 
-});
 
