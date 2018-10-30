@@ -50,42 +50,22 @@
                 <table class="cart-table" width="450px" id="cart-items">
                 <!-- Items inserted here  -->
                 </table>
- <!--                <div class="cart-item">
-                    <div class="delete-container">
-                        <button class="delete-btn">X</button>
-                    </div>
-                    <img class= "thumbnail" src="assets/dog-harness1@3x.jpg" alt=dog>
-                    <div class="cart-descript">
-                        <h5>Dog Harness</h5>
-                        <p>Size: Tiny</p>
-                        <p>Color: Fire Orange</p>
-                        <div class="quantity">
-                            <button class="plus-btn" type="button" name="button">+</button>
-                            <input type="text" name="name" value="1">
-                            <button class="minus-btn" type="button" name="button">-</button>
-                        </div>
-                    </div>
-                    <div class="total-price">
-                        <h5>Price: $35</h5>
-                </div> -->
-            </div>
-        </div>
-
-        <div class="checkout-container">
-            <h4>Cart Summary</h4>
-            <div class="pricing-display">
-                <div>
-                    <p>Subtotal: $35.00</p>
-                    <p>Shipping</p>
-                    <p>Tax</p>
-                    <h5>Estimated Total: $35.00</h5>
-                </div>
-                <button class="button-checkout">Check out now</button>
-            </div>
         </div>
     </div>
+
+    <div class="checkout-container">
+        <h4>Cart Summary</h4>
+        <div class="total-cart">
+            <div id="total-price">
+            <!-- Subtotal inserted here -->
+            </div>
+            <button class="button-checkout">Check out now</button>
+        </div>
+    </div>
+
     <script>
         renderCart();
+        renderCartPrice();
         addListeners();
     </script>
 </body>

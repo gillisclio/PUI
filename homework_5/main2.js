@@ -1,7 +1,7 @@
 
 // Dictionary that maps images to user selected values
 
-var image_map = {'fireorange': 'dog-harness1@3x.jpg',
+var image_map_harness= {'fireorange': 'dog-harness1@3x.jpg',
             'blackberry': 'dog-harness2@3x.jpg',
             'crazyberry': 'dog-harness3@3x.jpg',
             'strawberry': 'dog-harness4@3x.jpg'};
@@ -20,15 +20,13 @@ $(function(){
     if(selectedVal == ""){ //if user hasn't selected any color, returns empty string
       selectedVal == "fireorange"; //set to fireorange
     }
-    var image_location = "assets/"+image_map[selectedVal];
+    var image_location = "assets/"+image_map_harness[selectedVal];
     $("#feature-image-container").attr("src",image_location);
-    console.log(image_map[selectedVal]);
+    console.log(image_map_harness[selectedVal]);
   });
 
   //When user clicks add to cart and has all fields selected, save item to cart/local storage
   $("#addToCart").on("click", saveItemToCart);
-
-
 
 
 });
@@ -38,6 +36,7 @@ $(function(){
 /*  Getting the values from the three input options,
 /*  Checking to make sure that all values are selected by the user
 /*  Creating an item for the cart and saving it to local storage
+/*  Add UID to give option of deleting item from local storage
 */
 
 function saveItemToCart(){
@@ -102,7 +101,6 @@ function saveCartToStorage(cart){
 /* Create a variable for table which will keep all the items in the cart
  * Create a variable for the cart items saved in local storage
  * Iterate over each item in the cart to generate table through HTML string, adding all items to table variable
- *
 */
   function renderCart() {
     var totalTable = "";
@@ -111,11 +109,12 @@ function saveCartToStorage(cart){
       var item = cartStorage[i];
       var totalItems = `
       <tr class="cart-item" data-item-uid="${item.uid}">
-      <td><p><img "width: 150px; height: 150px; padding: 0px 15px;" src="assets/dog-harness1@3x.jpg">
+      <td><p><img "width: 150px; height: 150px; padding: 0px 15px;" src="${findImage(item)}" width = "150px">
       <td><p>${item.name}<br><br>
         Size: ${item.size}<br><br>
         Color: ${item.color}<br><br>
-        Quantity: ${item.qty}</p></td>
+        Quantity: ${item.qty}<br><br>
+        Price: $${item.price}.00</p></td>
       <td><button class="delete-btn" data-uid="${item.uid}">X</button></td>
       <tr>`
       totalTable = totalTable+totalItems;
@@ -125,6 +124,10 @@ function saveCartToStorage(cart){
     cartTable.innerHTML = totalTable;
   };
 
+/* Create event listeners
+ * If user clicks delete button and the item has a UID
+ * Filter the cart and separate out deleted items
+*/
   function addListeners(){
     $(".delete-btn").click(function(){
       var uid = $(this).attr("data-uid");
@@ -135,6 +138,33 @@ function saveCartToStorage(cart){
         $(`[data-item-uid="${uid}"]`).remove();
       }
     });
+  };
+
+  function findImage(item){
+    if (item.name == "DOG HARNESS") {
+      var imageSource = "assets/dog-harness1@3x.jpg";
+    return imageSource
+
+  };
+
+};
+
+  function renderCartPrice(){
+    var totalCart = 0;
+    var cart = getCartFromStorage();
+    for (var i=0; i < cart.length; i++) {
+      var item = cart[i];
+      console.log(item)
+      var amount = item.qty;
+      var price = item.price;
+      totalCart = totalCart + price;
+  }
+      var cartPrice = document.getElementById('total-price');
+      var finalPrice = 'Subtotal: ' + '$' + totalCart + '.00';
+
+      cartPrice.innerHTML = finalPrice;
+
+
   };
 
 
