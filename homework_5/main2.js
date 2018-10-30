@@ -14,6 +14,7 @@ const CART_KEY = 'cart';
 // Run when document is ready, which means it is fully loaded into browser
 $(function(){
 
+  // When user selects a color in the dropdown, change image
   $("#color-input").on("change", function(){
     var selectedVal = $(this).val();
     if(selectedVal == ""){ //if user hasn't selected any color, returns empty string
@@ -24,11 +25,13 @@ $(function(){
     console.log(image_map[selectedVal]);
   });
 
+  //When user clicks add to cart and has all fields selected, save item to cart/local storage
   $("#addToCart").on("click", saveItemToCart);
 
 
 
-});
+
+
 
 
 /* Defining how the item will be saved to cart:
@@ -38,6 +41,7 @@ $(function(){
 */
 
 function saveItemToCart(){
+    var product = $('#product-name').html();
     var color = $('#color-input').val();
     var size = $('#size-input').val();
     var qty = $('#qty-input').val();
@@ -48,6 +52,7 @@ function saveItemToCart(){
     }
 
     var item = {
+      'name': product,
       'color': color,
       'size': size,
       'qty': qty,
@@ -93,4 +98,35 @@ function saveCartToStorage(cart){
 
   };
 
+/* Create a variable for table which will keep all the items in the cart
+ * Create a variable for the cart items saved in local storage
+ * Iterate over each item in the cart to generate table through HTML string, adding all items to table variable
+ *
+*/
+  function renderCart() {
+    var totalTable = "";
+    var cartStorage = getCartFromStorage();
+    for (let i = 0; i < cartStorage.length; i++){
+      var item = cartStorage[i];
+      var totalItems = `
+      <tr class="cart-item">
+      <td><p><img "width: 150px; height: 150px; padding: 0px 15px;" src="${findImage(item)}">
+      <td><p>${item.name}<br><br>
+        Size: ${item.size}<br><br>
+        Color: ${item.color}<br><br>
+        Quantity: ${item.qty}</p></td>
+      <td><button class="delete-btn">X</button></td>
+      <tr>`
+      totalTable = totalTable+totalItems;
+      console.log(totalTable);
+    }
+
+    var cartTable = $("cart-items");
+    var finalTable = totalTable;
+
+    cartTable.innerHTML = finalTable;
+  };
+
+
+});
 
