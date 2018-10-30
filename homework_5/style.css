@@ -90,11 +90,27 @@ ul {
     justify-content: space-between;
 }
 
-.cart {
+.nav-cart {
     padding-right: 20px;
     padding-top: 7px;
     width:10wv;
     height: 5%;
+}
+
+.nav-cart img {
+    float: right;
+}
+
+.nav-cart p {
+    font-weight: bold;
+    float:left;
+    margin-right: 5px;
+    color: #FC3C2D;
+
+}
+
+.nav-cart-count {
+    align-items:
 }
 
 /* Homepage */

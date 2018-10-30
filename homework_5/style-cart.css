@@ -139,3 +139,22 @@ h4 {
 
 }
 
+.cart {
+    position: relative;
+}
+.cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    opacity: 0;
+}
+.cart-badge.active {
+    opacity: 1;
+}

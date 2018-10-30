@@ -1,10 +1,10 @@
 
 // Dictionary that maps images to user selected values
 
-var image_map_harness= {'fireorange': 'dog-harness1@3x.jpg',
-            'blackberry': 'dog-harness2@3x.jpg',
-            'crazyberry': 'dog-harness3@3x.jpg',
-            'strawberry': 'dog-harness4@3x.jpg'};
+var image_map_harness = {'Fire Orange': 'dog-harness1@3x.jpg',
+            'Blackberry': 'dog-harness2@3x.jpg',
+            'Crazyberry': 'dog-harness3@3x.jpg',
+            'Strawberry': 'dog-harness4@3x.jpg'};
 
 // Price for dog harness
 const price = 35.00;
@@ -18,11 +18,12 @@ $(function(){
   $("#color-input").on("change", function(){
     var selectedVal = $(this).val();
     if(selectedVal == ""){ //if user hasn't selected any color, returns empty string
-      selectedVal == "fireorange"; //set to fireorange
+      selectedVal == "fireorange"; //set to fireorange harness as default
     }
     var image_location = "assets/"+image_map_harness[selectedVal];
     $("#feature-image-container").attr("src",image_location);
     console.log(image_map_harness[selectedVal]);
+
   });
 
   //When user clicks add to cart and has all fields selected, save item to cart/local storage
@@ -136,6 +137,7 @@ function saveCartToStorage(cart){
         cart = cart.filter( x =>  x.uid !== uid);
         saveCartToStorage(cart);
         $(`[data-item-uid="${uid}"]`).remove();
+        renderCartPrice();
       }
     });
   };
@@ -151,14 +153,23 @@ function saveCartToStorage(cart){
 
   function renderCartPrice(){
     var totalCart = 0;
+    var badge = document.getElementById('cart-badge');
+    badge.classList.remove('active');
+    badge.innerHTML = 0;
     var cart = getCartFromStorage();
+    if (cart && cart.length > 0) {
+      if (badge) {
+        badge.classList.add('active');
+        badge.innerHTML = cart.length;
+      }
+    }
     for (var i=0; i < cart.length; i++) {
       var item = cart[i];
       console.log(item)
       var amount = item.qty;
       var price = item.price;
       totalCart = totalCart + price;
-  }
+    }
       var cartPrice = document.getElementById('total-price');
       var finalPrice = 'Subtotal: ' + '$' + totalCart + '.00';
 
@@ -166,6 +177,14 @@ function saveCartToStorage(cart){
 
 
   };
+
+  // function navCart(){
+  //   var totalCart = 0;
+  //   var cart = getCartFromStorage();
+  //   for (var i=0; i < cart.length; i++) {
+  //     var item = cart[i];
+  //     totalCart = totalCart +
+
 
 
 
