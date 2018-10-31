@@ -559,6 +559,12 @@ ul.breadcrumb li a:hover {
     height: 50px;
 }
 
+#addToCart:hover {
+    background-color: #FC3C2D ;
+    color: white;
+    border:none;
+}
+
 
 /* Inputs */
 
@@ -591,6 +597,7 @@ option {
     position: relative;
     margin-right: 15px;
     margin-top: 9px;
+    float: right;
 }
 .cart-badge {
     position: absolute;
