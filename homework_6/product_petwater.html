@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato" rel="stylesheet">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--javascript-->
+    <script src="productbrowsing.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <!-- title -->
+    <title id=title>Muddy Paws - Pet Water Storage Harness Attachment</title>
+    </head>
+
+<!-- Navigation -->
+<body>
+    <header>
+        <div>
+            <!-- Nav -->
+            <div class="nav-container">
+                <ul class="nav-bar">
+                    <div class="nav-bar-wrapper">
+                    <li><h1><a id="nav-links" href="home.html">Muddy Paws</a></h1></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn"><h2>SHOP</h2></button>
+                            <div class="dropdown-content">
+                                <a href="productbrowsing.html">SHOP ALL PETS</a>
+                                <a href="product_dogharness.html">DOG HARNESS</a>
+                            </div>
+                        </div>
+                    </li>
+                    </div>
+                    <a href="shoppingcart.html"><div>
+                        <li class="cart">
+                            <img src="assets/cart@3x.png" alt=cart>
+                            <span class="cart-badge" id="cart-badge">00</span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="home.html">SHOP ALL PETS</a></li>
+        <li>All Pets</li>
+        <li>Pet Water Storage Harness Attachment</li>
+    </ul>
+
+    <!-- Content -->
+    <div class="image-display">
+        <div class="feature-image">
+            <img id="feature-image-container" src="assets/pet-water@3x.jpg" alt=gps>
+
+            <p>Comfortable for all shapes and sizes and breeds!</p>
+
+            <ul><h5>Activity Type</h5></ul>
+
+            <li>Hiking</li>
+            <li>Camping</li>
+            <li>Running</li>
+            <li>Casual walks</li>
+        </div>
+    </div>
+
+    <div class="description">
+        <h4 id="product-name">Pet Water Storage Harness Attachment</h4>
+        <h4 id="price">$35.00</h4>
+        <p>One-of-a-kind water storage harness attachment to keep your fur friend hydrated on the trail.</p>
+
+        <img src="assets/stars@3x.jpg" alt=stars>
+
+        <h5><br>Not sure what size your pet is?</h5>
+
+        <div>
+            <select id="color-input">
+                <option value="">Select Color</option>
+                <option value="Fire Orange">Fire Orange</option>
+                <option value="Blackberry">Blackberry</option>
+                <option value="Crazyberry">Crazyberry</option>
+                <option value="Strawberry">Strawberry</option>
+            </select>
+
+            <select id="size-input">
+                <option value="">Select Size</option>
+                <option value="Tiny">Tiny</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+
+            <select id="qty-input">
+                <option value="">Select QTY</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+    <div>
+        <button onclick="location.href='shoppingcart.html'"id="addToCart">Add to Cart</button>
+    </div>
+    <!-- JS scripts -->
+    <script>
+        renderCartBadge();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
