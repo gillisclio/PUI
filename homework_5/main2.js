@@ -34,10 +34,10 @@ $(function(){
 
 
 /* Defining how the item will be saved to cart:
-/*  Getting the values from the three input options,
-/*  Checking to make sure that all values are selected by the user
-/*  Creating an item for the cart and saving it to local storage
-/*  Add UID to give option of deleting item from local storage
+/* Getting the values from the three input options,
+/* Checking to make sure that all values are selected by the user
+/* Creating an item for the cart and saving it to local storage
+/* Add UID to give option of deleting item from local storage
 */
 
 function saveItemToCart(){
@@ -61,7 +61,7 @@ function saveItemToCart(){
     };
     console.log(item);
 
-/* Get Cart from local storage
+/* Get cart from local storage
  * Add the item we just created to the cart
  * Save the cart with new items into local storage
 */
@@ -74,7 +74,7 @@ function saveItemToCart(){
 
 }
 
-/* Save cart to local storage
+/* Saving cart to local storage:
  * Convert given cart to a string
  * then save the string to the array that is CART_KEY in local storage
  */
@@ -99,9 +99,11 @@ function saveCartToStorage(cart){
 
   };
 
-/* Create a variable for table which will keep all the items in the cart
+/* Render updated cart on cart page:
+ * Create a variable for table which will keep all the items in the cart
  * Create a variable for the cart items saved in local storage
  * Iterate over each item in the cart to generate table through HTML string, adding all items to table variable
+ * Change the inner HTML of the table on cart page to reflect items in local storage
 */
   function renderCart() {
     var totalTable = "";
@@ -125,9 +127,10 @@ function saveCartToStorage(cart){
     cartTable.innerHTML = totalTable;
   };
 
-/* Create event listeners
+/* Create event listeners:
  * If user clicks delete button and the item has a UID
  * Filter the cart and separate out deleted items
+ * Call cart price function to update cart price
 */
   function addListeners(){
     $(".delete-btn").click(function(){
@@ -142,6 +145,9 @@ function saveCartToStorage(cart){
     });
   };
 
+/* Finding image for cart items:
+ * Use item name to set default image of product on items
+*/
   function findImage(item){
     if (item.name == "DOG HARNESS") {
       var imageSource = "assets/dog-harness1@3x.jpg";
@@ -151,6 +157,11 @@ function saveCartToStorage(cart){
 
 };
 
+/* Generate cart price + update badge:
+ * Update badge on cart in nav based on how many items are in cart storage
+ * Iterate over cart to find items and add up prices into total price
+ * Change the inner HTML to the cart price
+*/
   function renderCartPrice(){
     var totalCart = 0;
     var badge = document.getElementById('cart-badge');
@@ -175,15 +186,8 @@ function saveCartToStorage(cart){
 
       cartPrice.innerHTML = finalPrice;
 
-
   };
 
-  // function navCart(){
-  //   var totalCart = 0;
-  //   var cart = getCartFromStorage();
-  //   for (var i=0; i < cart.length; i++) {
-  //     var item = cart[i];
-  //     totalCart = totalCart +
 
 
 
