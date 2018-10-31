@@ -60,10 +60,6 @@ h4 {
     padding: 0px 15px;
 }
 
-.cart-price {
-    flex: display;
-}
-
 .checkout-container {
     width: 25%;
     margin: 20px 50px;
@@ -113,9 +109,7 @@ h4 {
     width: 36px;
     color:#071457;
     line-height: 36px;
-    border-color:none;
     border-style: none;
-    border-width: none;
     font-size: 16px;
     float: right;
     text-align: center;
