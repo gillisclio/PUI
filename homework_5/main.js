@@ -41,16 +41,20 @@ const CART_KEY = 'cart';
 $(function(){
 
   // When user selects a color in the dropdown, change image
-  $("#color-input").on("change", function(){
-    var selectedVal = $(this).val();
-    if(selectedVal == ""){ //if user hasn't selected any color, returns empty string
-      selectedVal == "fireorange"; //set to fireorange harness as default
-    }
-    var image_location = "assets/"+image_map_harness[selectedVal];
-    $("#feature-image-container").attr("src",image_location);
-    console.log(image_map_harness[selectedVal]);
+  if ($("#product-name") == "Dog Harness") {
+      $("#color-input").on("change", function(){
+        var selectedVal = $(this).val();
+        if(selectedVal == ""){ //if user hasn't selected any color, returns empty string
+          selectedVal == "fireorange"; //set to fireorange harness as default
+        }
+        var image_location = "assets/"+image_map_harness[selectedVal];
+        $("#feature-image-container").attr("src",image_location);
+        console.log(image_map_harness[selectedVal]);
 
   });
+
+  };
+
 
   //When user clicks add to cart and has all fields selected, save item to cart/local storage
   $("#addToCart").on("click", saveItemToCart);
