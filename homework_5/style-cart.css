@@ -8,6 +8,10 @@
 
 /* Shopping Cart page */
 
+body {
+    color: #071457;
+}
+
 h4 {
     margin-block-start: .5em;
     margin-block-end: .5em;
@@ -24,6 +28,7 @@ h4 {
     margin: 20px 70px;
     display: flex;
     flex-direction: column;
+    color:#071457;
 }
 
 .cart-table {
@@ -63,6 +68,7 @@ h4 {
     width: 25%;
     margin: 20px 50px;
     float: right;
+    color:#071457;
 }
 
 .total-cart {
@@ -119,5 +125,4 @@ h4 {
 .delete-btn:hover {
     background-color: #E0E3EF;
 }
-
 

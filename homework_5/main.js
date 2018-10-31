@@ -6,32 +6,6 @@ var image_map_harness = {'Fire Orange': 'dog-harness1@3x.jpg',
             'Crazyberry': 'dog-harness3@3x.jpg',
             'Strawberry': 'dog-harness4@3x.jpg'};
 
-// var image_map_catharness = {'Fire Orange': 'cat-harness@3x.jpg',
-//             'Blackberry': 'cat-harness@3x.jpg',
-//             'Crazyberry': 'cat-harness@3x.jpg',
-//             'Strawberry': 'cat-harness@3x.jpg'};
-
-// var image_map_backpack = {'Fire Orange': 'cat-backpack@3x.jpg',
-//             'Blackberry': 'cat-backpack@3x.jpg',
-//             'Crazyberry': 'cat-backpack@3x.jpg',
-//             'Strawberry': 'cat-backpack@3x.jpg'};
-
-// var image_map_food = {'Fire Orange': 'pet-food@3x.jpg',
-//             'Blackberry': 'pet-food@3x.jpg',
-//             'Crazyberry': 'pet-food@3x.jpg',
-//             'Strawberry': 'pet-food@3x.jpg'};
-
-// var image_map_water = {'Fire Orange': 'pet-water@3x.jpg',
-//             'Blackberry': 'pet-water@3x.jpg',
-//             'Crazyberry': 'pet-water@3x.jpg',
-//             'Strawberry': 'pet-water@3x.jpg'};
-
-// var image_map_gps = {'Fire Orange': 'pet-collar-gps@3x.jpg',
-//             'Blackberry': 'pet-collar-gps@3x.jpg',
-//             'Crazyberry': 'pet-collar-gps@3x.jpg',
-//             'Crazyberry': 'pet-collar-gps@3x.jpg',
-//             'Strawberry': 'pet-collar-gps@3x.jpg'};
-
 // Price for dog harness
 const price = 35.00;
 // Key for cart in localStorage
@@ -40,7 +14,7 @@ const CART_KEY = 'cart';
 // Run when document is ready, which means it is fully loaded into browser
 $(function(){
 
-  // When user selects a color in the dropdown, change image
+  // When user selects a color in the dropdown on the dog harness page, change image
   if ($("#product-name") == "Dog Harness") {
       $("#color-input").on("change", function(){
         var selectedVal = $(this).val();
@@ -208,8 +182,7 @@ function saveCartToStorage(cart){
 
 };
 
-/* Generate cart price + update badge:
- * Update badge on cart in nav based on how many items are in cart storage
+/* Generate cart price:
  * Iterate over cart to find items and add up prices into total price
  * Change the inner HTML to the cart price
 */
@@ -230,6 +203,11 @@ function saveCartToStorage(cart){
 
   };
 
+/* Updating number of items in cart badge:
+ * Set variable for cart badge with id
+ * Iterate over card to find items
+ * if the cart the cart has items in it, make the badge appear and update the inner HTML of the id
+*/
   function renderCartBadge(){
     var badge = document.getElementById('cart-badge');
     badge.classList.remove('active');
