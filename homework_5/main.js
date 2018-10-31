@@ -6,6 +6,32 @@ var image_map_harness = {'Fire Orange': 'dog-harness1@3x.jpg',
             'Crazyberry': 'dog-harness3@3x.jpg',
             'Strawberry': 'dog-harness4@3x.jpg'};
 
+// var image_map_catharness = {'Fire Orange': 'cat-harness@3x.jpg',
+//             'Blackberry': 'cat-harness@3x.jpg',
+//             'Crazyberry': 'cat-harness@3x.jpg',
+//             'Strawberry': 'cat-harness@3x.jpg'};
+
+// var image_map_backpack = {'Fire Orange': 'cat-backpack@3x.jpg',
+//             'Blackberry': 'cat-backpack@3x.jpg',
+//             'Crazyberry': 'cat-backpack@3x.jpg',
+//             'Strawberry': 'cat-backpack@3x.jpg'};
+
+// var image_map_food = {'Fire Orange': 'pet-food@3x.jpg',
+//             'Blackberry': 'pet-food@3x.jpg',
+//             'Crazyberry': 'pet-food@3x.jpg',
+//             'Strawberry': 'pet-food@3x.jpg'};
+
+// var image_map_water = {'Fire Orange': 'pet-water@3x.jpg',
+//             'Blackberry': 'pet-water@3x.jpg',
+//             'Crazyberry': 'pet-water@3x.jpg',
+//             'Strawberry': 'pet-water@3x.jpg'};
+
+// var image_map_gps = {'Fire Orange': 'pet-collar-gps@3x.jpg',
+//             'Blackberry': 'pet-collar-gps@3x.jpg',
+//             'Crazyberry': 'pet-collar-gps@3x.jpg',
+//             'Crazyberry': 'pet-collar-gps@3x.jpg',
+//             'Strawberry': 'pet-collar-gps@3x.jpg'};
+
 // Price for dog harness
 const price = 35.00;
 // Key for cart in localStorage
@@ -151,10 +177,29 @@ function saveCartToStorage(cart){
  * Use item name to set default image of product on items
 */
   function findImage(item){
-    if (item.name == "DOG HARNESS") {
-      var imageSource = "assets/dog-harness1@3x.jpg";
+    if (item.name == "Dog Harness") {
+      var imageSource = "assets/dog-harness2@3x.jpg";
     return imageSource
-
+  };
+    if (item.name == "Cat Backpack") {
+      var imageSource = "assets/cat-backpack@3x.jpg";
+    return imageSource
+  };
+    if (item.name == "Cat Harness") {
+      var imageSource = "assets/cat-harness@3x.jpg";
+    return imageSource
+  };
+    if (item.name == "Pet GPS Collar") {
+      var imageSource = "assets/pet-collar-gps@3x.jpg";
+    return imageSource
+  };
+    if (item.name == "Pet Water Storage Harness Attachment") {
+      var imageSource = "assets/pet-water@3x.jpg";
+    return imageSource
+  };
+    if (item.name == "Pet Food Storage Harness Attachment") {
+      var imageSource = "assets/pet-food@3x.jpg";
+    return imageSource
   };
 
 };
@@ -167,16 +212,6 @@ function saveCartToStorage(cart){
   function renderCartPrice(){
     var totalCart = 0;
     var cart = getCartFromStorage();
-    // var badge = document.getElementById('cart-badge');
-    // badge.classList.remove('active');
-    // badge.innerHTML = 0;
-    // var cart = getCartFromStorage();
-    // if (cart && cart.length > 0) {
-    //   if (badge) {
-    //     badge.classList.add('active');
-    //     badge.innerHTML = cart.length;
-    //   }
-    // }
     for (var i=0; i < cart.length; i++) {
       var item = cart[i];
       console.log(item)
