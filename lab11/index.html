@@ -18,9 +18,24 @@
     </div>
 
     <!-- TODO (Step 3): add HTML template for product selection here -->
+    <script id="selection-template" type="text/x-handlebars-template">
+    {{#each cinnamonBuns}}
+        <div class="product-selection" id={{ id }}>
+            <img src={{ img }}>
+        </div>
+    {{/each}}
+</script>
 
 
     <!-- TODO (Step 5): add HTML template for product detail here -->
+    <script id="detail-template" type="text/x-handlebars-template">
+    <div class="product-detail">
+        <!-- insert HTML for name, price, and img -->
+        <h1>{{ name }}</h1>
+        <p>{{ price }}</p>
+        <img src={{ img }}>
+    </div>
+    </script>
 
 
 </body>
