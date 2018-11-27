@@ -1,0 +1,378 @@
+
+/* THE BASICS
+-------------------------------------------------- */
+.squig {
+	height: 100px;
+}
+
+:root{
+	--navy: #121738;
+	--butter: #F9F7E8;
+	--agua: #10B6DC;
+	--earth: #8A3B24;
+	--honey: #EED974;
+	--rose: #CE7182;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	color: var(--navy);
+	text-align: center;
+}
+
+h1, h2, h3, h5 {
+	font-family: 'Vollkorn', serif;
+}
+
+/* Page title */
+h1 {
+	color: var(--butter);
+	font-weight: 800;
+	letter-spacing: .02em;
+	font-size: 3em;
+}
+
+/* Title description */
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	color: var(--butter);
+	font-weight: bolder;
+	letter-spacing: .02em;
+	font-size: 1em;
+
+}
+
+/* Section titles */
+
+h3 {
+	color: var(--navy);
+	letter-spacing: .02em;
+	font-weight: 800;
+	font-size: 2em;
+}
+
+/* Section title descriptions */
+
+h4 {
+	font-family: 'Lato', sans-serif;
+	color: var(--navy);
+	font-weight: bolder;
+	letter-spacing: .02em;
+	font-size: 1em;
+}
+
+/*Bee types*/
+
+h5 {
+	color: var(--earth);
+	letter-spacing: .02em;
+	font-weight: 800;
+	font-size: 1.3em;
+}
+
+.container {
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+}
+
+/* HERO
+-------------------------------------------------- */
+
+/* Scroll to top button
+-------------------------------------------------- */
+
+#myBtn {
+/*	transform: rotate(90deg);*/
+	background: var(--navy);
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 20px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	color: var(--butter);
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	font-size: .8em;
+	font-weight: bold;
+	letter-spacing: 0.4em;
+	max-width: 300px;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: var(--agua);
+  height: 6px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+/* Hero block: curving and bg image;
+-------------------------------------------------- */
+
+.hero {
+	width: 100%;
+	height: 600px;
+	background-image: url('images/hero.png');
+	background-position: center;
+	background-repeat: no-repeat;
+    border-bottom-left-radius: 70% 30%;
+    border-bottom-right-radius: 70% 30%;
+	text-align: left;
+}
+
+.hero h1{
+	margin-top: 150px;
+	margin-left: 50px;
+}
+
+.hero h2{
+	margin-left: 50px;
+}
+
+/* Scroll to explore element;
+-------------------------------------------------- */
+
+#explore-text {
+	text-transform: uppercase;
+	text-align: center;
+    font-size: .8em;
+    font-weight: bolder;
+	letter-spacing: 0.4em;
+	color: var(--butter);
+	position: absolute;
+	top:0;
+	bottom:0;
+
+}
+
+
+/* ABOUT
+-------------------------------------------------- */
+
+/* About block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.about {
+	text-align: center;
+	height: 500px;
+	background-position: cover;
+	background-color: #F9F7E8;
+	width: 100%;
+}
+
+.about p {
+	text-align: center;
+	max-width: 200px;
+}
+
+#scientific-name {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* TYPES
+-------------------------------------------------- */
+
+/* Types block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.types {
+	text-align: center;
+	background-position: cover;
+	background-color: #F9F7E8;
+	width: 100%;
+}
+
+.types img{
+	margin-top: 40px;
+	width: 40%;
+}
+
+
+/* TIMELINE
+-------------------------------------------------- */
+
+/* Timeline block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.timeline {
+	height: 500px;
+	text-align: center;
+}
+
+/* FAST FACTS
+-------------------------------------------------- */
+
+/* Facts block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.facts {
+	width: 100%;
+	text-align: center;
+	background-color: var(--earth);
+    border-bottom-left-radius: 70% 30%;
+    border-bottom-right-radius: 70% 30%;
+}
+
+.facts h3 {
+	color: var(--honey);
+}
+
+.facts h4 {
+	color: var(--honey);
+}
+
+.facts p{
+	color: var(--butter);
+}
+
+.facts img{
+	height: 40%;
+}
+
+.button-fact {
+	margin: 50px 0 30px 0;
+	background-color: var(--butter);
+	color: var(--navy);
+	font-family: 'Lato', sans-serif;
+	font-weight: bolder;
+	font-size: 1.25em;
+	border: none;
+	padding: 5px 5px;
+}
+
+.button-fact:hover {
+	background-color: var(--agua);
+}
+
+/* Buzz */
+@-webkit-keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+@keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+.hvr-buzz {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-buzz:hover, .hvr-buzz:focus, .hvr-buzz:active {
+  -webkit-animation-name: hvr-buzz;
+  animation-name: hvr-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* BTW
+-------------------------------------------------- */
+
+/* By the way block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.btw {
+	background-color: var(--butter);
+	text-align: center;
+	width: 100%;
+}
+
+.btw h1 {
+	color: var(--navy);
+	max-width: 400px;
+}
+
+.btw img {
+	margin: 50px 0 50px 0;
+	max-height: 350px;
+	filter: drop-shadow(0 0 15px #333);
+}
+
+
+/* MORE
+-------------------------------------------------- */
+
+/* What's more block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.more {
+	background-color: var(--earth);
+	width: 100%;
+	text-align: center;
+}
+
+.more h3 {
+	color: var(--honey);
+}
+
+.more h4 {
+	color: var(--honey);
+}
+
+/* Text on curvy path;
+-------------------------------------------------- */
+
+path {
+  fill: transparent;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: var(--butter);
+	font-size: 3em;
+}
+
+
+
+
+
+
+
+
+
+
