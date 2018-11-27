@@ -1,8 +1,10 @@
 
 /* THE BASICS
 -------------------------------------------------- */
-.squig {
-	height: 100px;
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 22px;
+	background-color: var(--butter);
 }
 
 :root{
@@ -29,7 +31,7 @@ h1 {
 	color: var(--butter);
 	font-weight: 800;
 	letter-spacing: .02em;
-	font-size: 3em;
+	font-size: 3.3em;
 }
 
 /* Title description */
@@ -39,7 +41,8 @@ h2 {
 	color: var(--butter);
 	font-weight: bolder;
 	letter-spacing: .02em;
-	font-size: 1em;
+	font-size: 1.6em;
+
 
 }
 
@@ -49,7 +52,8 @@ h3 {
 	color: var(--navy);
 	letter-spacing: .02em;
 	font-weight: 800;
-	font-size: 2em;
+	font-size: 2.2em;
+	line-height: 2.3em;
 }
 
 /* Section title descriptions */
@@ -59,7 +63,7 @@ h4 {
 	color: var(--navy);
 	font-weight: bolder;
 	letter-spacing: .02em;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 
 /*Bee types*/
@@ -77,6 +81,18 @@ h5 {
 
 }
 
+.squig {
+	height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#squig-place {
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+}
+
 /* HERO
 -------------------------------------------------- */
 
@@ -85,22 +101,23 @@ h5 {
 
 #myBtn {
 /*	transform: rotate(90deg);*/
-	background: var(--navy);
+	background: var(--honey);
 	position: fixed; /* Fixed/sticky position */
-	bottom: 20px; /* Place the button at the bottom of the page */
-	right: 20px; /* Place the button 30px from the right */
+	bottom: 40px; /* Place the button at the bottom of the page */
+	right: 40px; /* Place the button 30px from the right */
 	z-index: 99; /* Make sure it does not overlap */
 	border: none; /* Remove borders */
 	outline: none; /* Remove outline */
-	color: var(--butter);
+	color: var(--navy);
 	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 15px; /* Some padding */
+	padding: 20px; /* Some padding */
 	font-size: .8em;
 	font-weight: bold;
 	letter-spacing: 0.4em;
 	max-width: 300px;
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
 .hvr-underline-from-left {
@@ -119,8 +136,8 @@ h5 {
   left: 0;
   right: 100%;
   bottom: 0;
-  background: var(--agua);
-  height: 6px;
+  background: var(--navy);
+  height: 8px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;
@@ -144,6 +161,7 @@ h5 {
     border-bottom-left-radius: 70% 30%;
     border-bottom-right-radius: 70% 30%;
 	text-align: left;
+	position: relative;
 }
 
 .hero h1{
@@ -166,8 +184,8 @@ h5 {
 	letter-spacing: 0.4em;
 	color: var(--butter);
 	position: absolute;
-	top:0;
-	bottom:0;
+	bottom: -150px;
+	width: 100%;
 
 }
 
@@ -188,7 +206,6 @@ h5 {
 
 .about p {
 	text-align: center;
-	max-width: 200px;
 }
 
 #scientific-name {
@@ -211,7 +228,7 @@ h5 {
 
 .types img{
 	margin-top: 40px;
-	width: 40%;
+	width: 50%;
 }
 
 
@@ -257,14 +274,18 @@ h5 {
 }
 
 .button-fact {
-	margin: 50px 0 30px 0;
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 20px; /* Some padding */
+	font-weight: bold;
+	letter-spacing: 0.4em;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 50px 0 50px 0;
 	background-color: var(--butter);
 	color: var(--navy);
-	font-family: 'Lato', sans-serif;
-	font-weight: bolder;
-	font-size: 1.25em;
+	font-size: 1em;
 	border: none;
-	padding: 5px 5px;
 }
 
 .button-fact:hover {
@@ -320,18 +341,48 @@ h5 {
 	background-color: var(--butter);
 	text-align: center;
 	width: 100%;
+	position: relative;
 }
 
 .btw h1 {
 	color: var(--navy);
 	max-width: 400px;
+	z-index: 1;
+	position: absolute;
 }
 
 .btw img {
 	margin: 50px 0 50px 0;
 	max-height: 350px;
-	filter: drop-shadow(0 0 15px #333);
 }
+
+.pics {
+	position: relative;
+	width: 100%;
+}
+
+.heart {
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+}
+
+.octo {
+	filter: drop-shadow(0 0 15px #333);
+	z-index: 3;
+}
+
+.highlight {
+	position: relative;
+	width: 100%;
+}
+
+.ray {
+	opacity: 0;
+	z-index: 0;
+	position: relative;
+}
+
 
 
 /* MORE
@@ -344,6 +395,9 @@ h5 {
 	background-color: var(--earth);
 	width: 100%;
 	text-align: center;
+	border-top-left-radius: 70% 30%;
+    border-top-right-radius: 70% 30%;
+    min-height: 600px;
 }
 
 .more h3 {
@@ -351,22 +405,136 @@ h5 {
 }
 
 .more h4 {
+	color: var(--butter);
+}
+
+#polinate {
+	text-align: left;
+}
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/* ALMONDS
+-------------------------------------------------- */
+
+/* Almonds block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.almonds {
+	width: 100%;
+	background-image: url('images/almonds.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	min-height: 500px;
+}
+
+.almonds h3 {
+	color:var(--earth);
+	text-shadow: 0.05em 0.05em rgba(0, 0, 0, .05);
+
+}
+
+/* RISK
+-------------------------------------------------- */
+
+/* Risk block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.risk {
+	width: 100%;
+	background-image:url('images/stripes.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	min-height: 500px;
+}
+
+.risk h3 {
+	color: var(--butter);
+}
+
+/* THREATS
+-------------------------------------------------- */
+
+/* Threats block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.threat {
+	width: 100%;
+	background-image:url('images/darkbee.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	min-height: 500px;
+}
+
+.threat img{
+	margin-top: 40px;
+	width: 50%;
+}
+
+.threat h3{
 	color: var(--honey);
 }
 
-/* Text on curvy path;
+.threat h5 {
+	color: var(--honey);
+}
+
+.threat p {
+	color: var(--butter);
+}
+
+/* HELP
 -------------------------------------------------- */
 
-path {
-  fill: transparent;
+/* Help block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.help {
+	background-color: var(--butter);
+	width: 100%;
+	text-align: center;
+	min-height: 500px;
 }
 
-body {
-	font-family: 'Lato', sans-serif;
-	color: var(--butter);
-	font-size: 3em;
+.help h3 {
+	color: var(--agua);
 }
 
+.help h5 {
+	color: var(--agua);
+}
 
 
 
