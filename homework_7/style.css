@@ -82,15 +82,17 @@ h5 {
 }
 
 .squig {
-	height: 100px;
+	height: 120px;
     display: block;
     margin: 0 auto;
+
 }
 
 #squig-place {
     width: 100%;
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
+    z-index: 3;
 }
 
 /* HERO
@@ -186,7 +188,6 @@ h5 {
 	position: absolute;
 	bottom: -150px;
 	width: 100%;
-
 }
 
 
@@ -202,6 +203,7 @@ h5 {
 	background-position: cover;
 	background-color: #F9F7E8;
 	width: 100%;
+	position:relative;
 }
 
 .about p {
@@ -211,6 +213,15 @@ h5 {
 #scientific-name {
 	font-style: italic;
 	font-weight: bold;
+}
+
+#comb {
+	position: absolute;
+	top: -200px;
+    opacity: .6;
+    left: 20px;
+    width: 100%;
+
 }
 
 /* TYPES
@@ -229,6 +240,71 @@ h5 {
 .types img{
 	margin-top: 40px;
 	width: 50%;
+}
+
+#worker {
+	background-image: url("images/queenbee.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#worker:hover {
+	background-image: url("images/workerbee-hover.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#queen {
+	background-image: url("images/queenbee.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#queen:hover {
+	background-image: url("images/queenbee-hover.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#drone {
+	background-image: url("images/queenbee.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#drone:hover {
+	background-image: url("images/dronebee-hover.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
@@ -515,6 +591,54 @@ h5 {
 	color: var(--butter);
 }
 
+#threat1 {
+	background-image: url("images/collapse.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#threat1:hover {
+	background-image: url("images/collapse-hover.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#threat2 {
+	background-image: url("images/parasite.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#threat2:hover {
+	background-image: url("images/parasite-hover.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#threat3 {
+	background-image: url("images/pesticide.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
+#threat3:hover {
+	background-image: url("images/pesticide-hover.png");
+	height: 200px;
+	width: 200px;
+	margin: 40px auto;
+	background-repeat: no-repeat;
+}
+
 /* HELP
 -------------------------------------------------- */
 
@@ -536,9 +660,31 @@ h5 {
 	color: var(--agua);
 }
 
+/* HOW
+-------------------------------------------------- */
+
+/* HOW  block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.how {
+	width: 100%;
+	text-align: center;
+	background-color: var(--rose);
+
+}
+
+.how h3 {
+	color: var(--butter);
+}
+
+.how h4 {
+	color: var(--butter);
+}
 
 
-
+.how p {
+	color: var(--butter);
+}
 
 
 
