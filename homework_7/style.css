@@ -106,7 +106,7 @@ h5 {
 	background: var(--honey);
 	position: fixed; /* Fixed/sticky position */
 	bottom: 40px; /* Place the button at the bottom of the page */
-	right: 40px; /* Place the button 30px from the right */
+	right: 100px; /* Place the button 30px from the right */
 	z-index: 99; /* Make sure it does not overlap */
 	border: none; /* Remove borders */
 	outline: none; /* Remove outline */
@@ -449,8 +449,9 @@ h5 {
 }
 
 .highlight {
-	position: relative;
 	width: 100%;
+	z-index: 1;
+	position: absolute;
 }
 
 .ray {
