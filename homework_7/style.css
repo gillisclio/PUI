@@ -156,8 +156,8 @@ h5 {
 
 .hero {
 	width: 100%;
-	height: 600px;
-	background-image: url('images/hero.png');
+	min-height: 800px;
+	background-image: url('images/hero.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
     border-bottom-left-radius: 70% 30%;
@@ -175,18 +175,6 @@ h5 {
 	margin-left: 50px;
 }
 
-/* Smartphon es (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-	.hero h1 {
-		size: 2em;
-	}
-
-	.hero h2 {
-		size: 1em;
-	}
-}
-
 /* Scroll to explore element;
 -------------------------------------------------- */
 
@@ -198,7 +186,7 @@ h5 {
 	letter-spacing: 0.4em;
 	color: var(--butter);
 	position: absolute;
-	bottom: -150px;
+	bottom: -330px;
 	width: 100%;
 }
 
@@ -211,8 +199,6 @@ h5 {
 
 .about {
 	text-align: center;
-	height: 500px;
-	background-position: cover;
 	background-color: #F9F7E8;
 	width: 100%;
 	position:relative;
@@ -309,7 +295,6 @@ h5 {
 
 .types {
 	text-align: center;
-	background-position: cover;
 	background-color: #F9F7E8;
 	width: 100%;
 }
@@ -494,6 +479,7 @@ h5 {
 	text-align: center;
 	width: 100%;
 	position: relative;
+	min-height: 500px;
 }
 
 .btw h1 {
@@ -553,7 +539,7 @@ h5 {
 	text-align: center;
 	border-top-left-radius: 70% 30%;
     border-top-right-radius: 70% 30%;
-    min-height: 600px;
+/*    min-height: 600px;*/
 }
 
 .more h3 {
@@ -567,8 +553,6 @@ h5 {
 .more p {
 	color: var(--butter);
 }
-
-
 
 
 /* ALMONDS
@@ -735,30 +719,123 @@ h5 {
 /* HOW
 -------------------------------------------------- */
 
-/* HOW  block: background, formatting elements within it;
+/* How:; block: background, formatting elements within it;
 -------------------------------------------------- */
 
 .how {
 	width: 100%;
 	text-align: center;
-	background-color: var(--rose);
+	background-color: var(--butter);
+	position: relative;
+	min-height: 500px;
+	height: 80%;
 
 }
 
 .how h3 {
-	color: var(--butter);
+	color: var(--rose);
 
 }
 
 .how h4 {
-	color: var(--butter);
+	color: var(--rose);
+	z-index: 3;
 }
 
 
 .how p {
-	color: var(--butter);
+	color: var(--navy);
+	z-index: 3;
 }
 
+#flowers {
+    position: absolute;
+    top: -200px;
+    opacity: .6;
+    left: 20px;
+    width: 100%;
+    z-index: 1;
+
+}
+
+/* FIN
+-------------------------------------------------- */
+
+/* Fin:;  block: background, formatting elements within it;
+-------------------------------------------------- */
+
+.fin {
+	background-image: url('images/hero.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	text-align: center;
+	border-top-left-radius: 70% 30%;
+    border-top-right-radius: 70% 30%;
+    min-height: 800px;
+
+}
+
+
+/* Media Queries
+-------------------------------------------------- */
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+
+	h3 {
+		line-height: 2em;
+	}
+
+	p {}
+
+	.hero {
+		text-align: center;
+	}
+
+	.hero h1 {
+		font-size:2.2em;
+		margin: 50px 10px;
+	}
+
+	.hero h2 {
+		font-size: : .8em;
+		margin: 50px 10px;
+	}
+
+	#explore-text {
+		bottom: -280px;
+	}
+
+	#fact-img {
+		width: 100%;
+	}
+
+	.btw img {
+		width: 100%;
+	}
+
+	.ray, .ray-low {
+		width: 90%;
+		padding-top: -20px;
+	}
+
+	#comb {
+	    top: -80px;
+	    opacity: 1;
+	    left: -10px;
+	    width: 120%;
+	}
+
+	#flowers {
+		position: absolute;
+    	top: 20px;
+    	opacity: 1;
+    	left: 20px;
+    	width: 100%;
+	}
+}
 
 
 
