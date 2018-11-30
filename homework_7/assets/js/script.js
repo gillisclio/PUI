@@ -63,22 +63,22 @@ $(window).on('scroll', function(){
 	var collection = [
 		{
 			key: '1',
-			picture: 'images/earth.png',
+			picture: 'assets/images/earth.png',
 			fact: "A bee has to fly about 90,000 miles – 3 times around the globe – in order to produce one pound of honey."
 		},
 		{
 			key: '2',
-			picture: 'images/seed.png',
+			picture: 'assets/images/seed.png',
 			fact: "A honeybee's brain is the size of one sesame seed!"
 		},
 		{
 			key: '3',
-			picture: 'images/spoon.png',
+			picture: 'assets/images/spoon.png',
 			fact: "The average bee will make 1/12th of a teaspoon of honey in their lifetime."
 		},
 		{
 			key: '4',
-			picture: 'images/bear.png',
+			picture: 'assets/images/bear.png',
 			fact: "Honeybees must gather nectar from 2 million flowers to make one pound of honey."
 		}
 	];

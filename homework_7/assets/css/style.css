@@ -160,7 +160,7 @@ h5 {
 .hero {
 	width: 100%;
 	min-height: 800px;
-	background-image: url('images/hero.jpg');
+	background-image: url('../images/hero.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
     border-bottom-left-radius: 70% 30%;
@@ -308,7 +308,7 @@ h5 {
 }
 
 #worker {
-	background-image: url("images/queenbee.png");
+	background-image: url("../images/queenbee.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -317,7 +317,7 @@ h5 {
 }
 
 #worker:hover {
-	background-image: url("images/workerbee-hover.png");
+	background-image: url("../images/workerbee-hover.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -325,7 +325,7 @@ h5 {
 }
 
 #queen {
-	background-image: url("images/queenbee.png");
+	background-image: url("../images/queenbee.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -334,7 +334,7 @@ h5 {
 }
 
 #queen:hover {
-	background-image: url("images/queenbee-hover.png");
+	background-image: url("../images/queenbee-hover.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -342,7 +342,7 @@ h5 {
 }
 
 #drone {
-	background-image: url("images/queenbee.png");
+	background-image: url("../images/queenbee.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -351,7 +351,7 @@ h5 {
 }
 
 #drone:hover {
-	background-image: url("images/dronebee-hover.png");
+	background-image: url("../images/dronebee-hover.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -533,7 +533,7 @@ h5 {
 -------------------------------------------------- */
 
 .more {
-/*	background-image: url("images/more.png");
+/*	background-image: url("assets/images/more.png");
 	background-position: center;
 	background-repeat: no-repeat;*/
 	background-color: var(--earth);
@@ -565,7 +565,7 @@ h5 {
 
 .almonds {
 	width: 100%;
-	background-image: url('images/almonds.png');
+	background-image: url('../images/almonds.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -586,7 +586,7 @@ h5 {
 
 .risk {
 	width: 100%;
-	background-image:url('images/stripes.png');
+	background-image:url('../images/stripes.png');
 	background-position: center;
 	background-repeat: repeat;
 	text-align: center;
@@ -628,7 +628,7 @@ h5 {
 }
 
 #threat1 {
-	background-image: url("images/collapse.png");
+	background-image: url("../images/collapse.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -637,7 +637,7 @@ h5 {
 }
 
 #threat1:hover {
-	background-image: url("images/collapse-hover.png");
+	background-image: url("../images/collapse-hover.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -645,7 +645,7 @@ h5 {
 }
 
 #threat2 {
-	background-image: url("images/parasite.png");
+	background-image: url("../images/parasite.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -654,7 +654,7 @@ h5 {
 }
 
 #threat2:hover {
-	background-image: url("images/parasite-hover.png");
+	background-image: url("../images/parasite-hover.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -662,7 +662,7 @@ h5 {
 }
 
 #threat3 {
-	background-image: url("images/pesticide.png");
+	background-image: url("../images/pesticide.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -671,7 +671,7 @@ h5 {
 }
 
 #threat3:hover {
-	background-image: url("images/pesticide-hover.png");
+	background-image: url("../images/pesticide-hover.png");
 	height: 200px;
 	width: 200px;
 	margin: 40px auto;
@@ -768,7 +768,7 @@ h5 {
 -------------------------------------------------- */
 
 .fin {
-	background-image: url('images/hero.png');
+	background-image: url('../images/hero.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
