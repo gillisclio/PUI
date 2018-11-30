@@ -20,6 +20,8 @@ p {
 	font-family: 'Lato', sans-serif;
 	color: var(--navy);
 	text-align: center;
+	margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h1, h2, h3, h5 {
@@ -215,7 +217,7 @@ h5 {
 
 #comb {
 	position: absolute;
-	top: -200px;
+	top: -325px;
     opacity: .6;
     left: 20px;
     width: 100%;
@@ -593,6 +595,7 @@ h5 {
 
 .risk h3 {
 	color: var(--butter);
+	padding-top: 45px;
 }
 
 /* THREATS
@@ -690,7 +693,7 @@ h5 {
 }
 
 .help h3 {
-	padding-top: 100px;
+	padding-top: 150px;
 	color: var(--earth);
 }
 

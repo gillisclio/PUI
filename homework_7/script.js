@@ -27,7 +27,7 @@ $(window).on('scroll', function(){
    	windowHeight = $(window).height(),
    	windowScroll = $(this).scrollTop();
 
-   	if (windowScroll > (heartTop+heartHeight-windowHeight/1.2)) {
+   	if (windowScroll > (heartTop+heartHeight-windowHeight/1.1)) {
    		$(".heart").addClass("fadeInUp");
    	}
 })
@@ -40,7 +40,7 @@ $(window).on('scroll', function(){
    	windowHeight = $(window).height(),
    	windowScroll = $(this).scrollTop();
 
-   	if (windowScroll > (rayTop+rayHeight-windowHeight/1.2)) {
+   	if (windowScroll > (rayTop+rayHeight-windowHeight/1.1)) {
    		$(".ray").addClass("fadeInUp");
    	}
 })
@@ -53,7 +53,7 @@ $(window).on('scroll', function(){
    	windowHeight = $(window).height(),
    	windowScroll = $(this).scrollTop();
 
-   	if (windowScroll > (rayTop+rayHeight-windowHeight/1.2)) {
+   	if (windowScroll > (rayTop+rayHeight-windowHeight/1.1)) {
    		$(".ray-low").addClass("fadeInUp");
    	}
 })
