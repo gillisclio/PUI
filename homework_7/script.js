@@ -1,4 +1,4 @@
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 20px from the top of the document, show the scroll to top button
 
 window.onscroll = function() {scrollFunction()};
 
@@ -59,45 +59,50 @@ $(window).on('scroll', function(){
 })
 
 // FACTS
+// Create collection with keys, photos, and facts to pull from when user clicks button
+	var collection = [
+		{
+			key: '1',
+			picture: 'images/earth.png',
+			fact: "A bee has to fly about 90,000 miles – 3 times around the globe – in order to produce one pound of honey."
+		},
+		{
+			key: '2',
+			picture: 'images/seed.png',
+			fact: "A honeybee's brain is the size of one sesame seed!"
+		},
+		{
+			key: '3',
+			picture: 'images/spoon.png',
+			fact: "The average bee will make 1/12th of a teaspoon of honey in their lifetime."
+		},
+		{
+			key: '4',
+			picture: 'images/bear.png',
+			fact: "Honeybees must gather nectar from 2 million flowers to make one pound of honey."
+		}
+	];
 
-$(".button-fact").on("click", createFact);
-
-function createFact(){
-// setting up variables
-	var image_map = {"A bee has to fly about 90,000 miles – 3 times around the globe – in order to produce one pound of honey." : "images/earth.png",
-					"A honeybee's brain is the size of one sesame seed!" : "images/seed.png",
-					"The average bee will make 1/12th of a teaspoon of honey in their lifetime." : "images/spoon.png",
-					"Honeybees must gather nectar from 2 million flowers to make one pound of honey." : "images/bear.png"};
-
-
-	// ["images/earth.png", "images/seed.png", "images/spoon.png", "images/bear.png"]
-	// var texts = ["A bee has to fly about 90,000 miles – 3 times around the globe – in order to produce one pound of honey.",
-	// 			 "A honeybee's brain is the size of one sesame seed!",
-	// 			 "The average bee will make 1/12th of a teaspoon of honey in their lifetime. ",
-	// 			 "Honeybees must gather nectar from 2 million flowers to make one pound of honey."]
-
-	//randomizing
+// Create function to randomize based on length
 	function random(length)
 	{
 	    return Math.floor(Math.random()*length);
 	}
+// Create function that randomly pulls a fact and image combo on page load
+	function randomize() {
+		var index = random(collection.length);
+		var src = collection[index].picture;
+		var fact = collection[index].fact;
+		$("#fact-img").attr("src", src);
+	  	$("#fact-text").html(fact);
+	}
 
-	//creating an object
-	class Fact{
+	  randomize();
 
-	  constructor(img, text)
-	  {
-	    this.pic = img
-	    this.text = text
+// Adding event listener and running randomize specifically when the user clicks the button
+	  var randomBtn = document.getElementById('randomizer');
+	  if (randomBtn) {
+	  	randomBtn.addEventListener('click', randomize);
 	  }
-	}
-
-	  var fact = new Fact(picts[random(4)], texts[random(4)])
-	  console.log(fact)
-	  $("#fact-img").attr("src", fact.pic);
-	  $("#fact-text").html(fact.text);
-	}
-
-
 
 });
