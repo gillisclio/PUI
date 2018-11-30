@@ -29,7 +29,7 @@
             <button onclick="topFunction()" class="hvr-underline-from-left" id="myBtn" title="Go to top">Buzz to Top</button>
     <!-- Title + Description
 ================================================== -->
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                 <h1>The Significance of the Honeybee</h1>
                 <h2>Learn about the world's number one pollinators and their sweet history.</h2>
                 <p id="explore-text">Scroll to Explore</p>
@@ -50,7 +50,7 @@
                 <h3 id="scientific-name">Apis melliferia</h3>
                 <p>The honeybee is the Earth’s most prolific polinator. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             </div>
-            <img id="comb" src="images/comb-all.png">
+            <img id="comb" class="hvr-bob" src="images/comb-all.png">
         </div>
     </div>
     <!-- BEE TYPES
@@ -81,16 +81,6 @@
 
         </div>
     </div>
-    <!-- TIMELINE
-================================================== -->
-    <div class="container timeline">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>History of Bees</h3>
-                <h4>I'll bee brief.</h4>
-            </div>
-        </div>
-    </div>
     <!-- FAST FACTS
 ================================================== -->
     <div class="container facts">
@@ -99,8 +89,10 @@
                 <h3>Fast Bee Facts</h3>
                 <h4>You ready?</h4>
                 <button class="button-fact hvr-buzz">show me the facts</button>
-                <p>A bee has to fly about 90,000 miles – 3 times around the globe – in order to produce one pound of honey.</p>
-                <img src="images/earth.png">
+                <div class="fact">
+                    <p id="fact-text">A bee has to fly about 90,000 miles – 3 times around the globe – in order to produce one pound of honey.</p>
+                    <img id="fact-img" src="images/earth.png">
+                </div>
             </div>
         </div>
     </div>
@@ -125,20 +117,20 @@
 ================================================== -->
     <div class="container more">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6 col-md-offset-3">
                 <h3>What's More...</h3>
+                <h4>More bees, more money, more awareness</h4>
+                <img src="">
             </div>
-            <div class="col-md-4">
-                <div class="hvr-underline-from-center">
-                    <h4 id="polinate">Honeybees polinate 70 of the around 100 crop species that feed 90% of the world.</h4>
+            <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-4">
+                    <p>Honeybees polinate 70 of the around 100 crop species that feed 90% of the world. Just wow. </p>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <img src="images/corn.png">
-            </div>
-            <div class="col-md-4">
-                <div class="hvr-underline-from-center">
-                    <h4 id="polinate">They’re also responsible for $30 billion a year in crops.</h4>
+                <div class="col-md-4">
+                    <p>In fact, the presence and absence of honeybees tells us when there has been a shift in the ecological balance, which impacts food production. </p>
+                </div>
+                <div class="col-md-4">
+                    <p>The economic health of U.S. agriculture depends on this balance – honey bees are responsible for $30 billion a year in crops.</p>
                 </div>
             </div>
         </div>
@@ -193,8 +185,14 @@
     <div class="container help">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>But you can help!</h3>
-                <h4>Yes, you.</h4>
+                <div class="pics">
+                    <div class="highlight-low">
+                        <h3>But you can help!</h3>
+                        <h4>Yes, you.</h4>
+                    </div>
+                    <img class="animated ray-low" src="images/ray.png">
+                </div>
+
             </div>
         </div>
     </div>
